@@ -6,6 +6,6 @@ class Battleship : public Ship
 public:
 	Battleship() : Ship()
 	{
-		setHealth(9);
+		setHealth(4);
 	}
 };

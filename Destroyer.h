@@ -6,6 +6,6 @@ class Destroyer : public Ship
 public:
 	Destroyer() : Ship()
 	{
-		setHealth(3);
+		setHealth(2);
 	}
 };

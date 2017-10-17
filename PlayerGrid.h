@@ -1,25 +1,23 @@
+#include <vector>
+#include <utility>
 #include "GameGrid.h"
 #pragma once
+
+class ComputerGrid;
 
 class PlayerGrid : public GameGrid
 {
 public:
-	PlayerGrid(int sDifficulty, int destoyNum, int frigateNum, int battleNum)
-		: GameGrid()
+	PlayerGrid(int sDifficulty, bool displGrid)
+		: GameGrid(sDifficulty, displGrid)
 	{
-		setDifficulty(sDifficulty);
-		addShips(destoyNum, frigateNum, battleNum);
+		playerChooseShips();
 		playerPlaceShips();
 		placeBarrels();
 	}
+	void playerChooseShips();
 	void playerPlaceShips();
-	virtual void fire() override;
-	//returns true if coordinates don't hit or miss again
-	bool checkHit(int x, int y);
-	void computerFire(int x, int y);
-	virtual void printGrid() const override;
-private:
-	bool hitLastTurn = false;
-	int consecutiveHits = 0;
-	int totalHits = 0;
+	void playerFire(int&, int&);
+	void fire(int, int, bool&);
+	void updateTurnGrid(ComputerGrid&);
 };

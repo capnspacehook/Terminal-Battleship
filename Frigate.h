@@ -6,6 +6,6 @@ class Frigate : public Ship
 public:
 	Frigate() : Ship()
 	{
-		setHealth(6);
+		setHealth(3);
 	}
 };

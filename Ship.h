@@ -3,19 +3,10 @@
 class Ship
 {
 public:
-	void setHealth(int h)
-	{
-		health = h;
-	}
-	int getHealth() const
-	{
-		return health;
-	}
+	void setHealth(int h) { health = h; }
+	int getHealth() const { return health; }
 	//decreases hit ship's health by one
-	void shipHit()
-	{
-		setHealth(this->getHealth() - 1);
-	}
+	void shipHit() { setHealth(this->getHealth() - 1); }
 	//checks if ship is sunk
 	bool shipSunk()
 	{
