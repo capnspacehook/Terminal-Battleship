@@ -262,7 +262,6 @@ void GameGrid::sinkShip(Utils::ShipName sunkShipName, int sunkShip)
 		if (getFleetPosCell(x, y) == 'S')
 			eraseLastHit(i);
 	}
-	Utils::printCenter("Ship Sunk!", getDifficultySize());
 }
 
 void GameGrid::placeBarrels()

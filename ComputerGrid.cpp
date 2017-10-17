@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <tuple>
+#include <utility>
 #include <random>
 #include <functional>
 #include "Utils.h"
@@ -146,6 +146,7 @@ void ComputerGrid::fire(int x, int y, bool& playerHit)
 			damagedShip = (int)(getFleetPosCell(x, y));
 			setGridCell(x, y, 'S');
 			sinkShip(sunkShip, damagedShip);
+			Utils::printCenter("Ship Sunk!", diffSize);
 		}
 		else
 		{
@@ -213,7 +214,7 @@ void ComputerGrid::computerFire(int& x, int& y, bool& computerHit)
 		//get most probable spot to fire upon
 		int maxProb = 0;
 		int numOfMaxes = 0;
-		vector<tuple<int, int>> maxes;
+		vector<pair<int, int>> maxes;
 		for (int y = 0; y < diffSize; y++)
 			for (int x = 0; x < diffSize; x++)
 			{
@@ -225,7 +226,7 @@ void ComputerGrid::computerFire(int& x, int& y, bool& computerHit)
 				}
 				if (probGrid[y][x] == maxProb)
 				{
-					maxes.push_back(make_tuple(x, y));
+					maxes.push_back(make_pair(x, y));
 					numOfMaxes++;
 				}
 			}

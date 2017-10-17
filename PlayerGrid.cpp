@@ -216,6 +216,7 @@ void PlayerGrid::fire(int x, int y, bool& hit)
 			damagedShip = (int)(getFleetPosCell(x, y));
 			setGridCell(x, y, 'S');
 			sinkShip(sunkShip, damagedShip);
+			Utils::printCenter("Ship Sunk!", diffSize);
 		}
 		else
 		{
