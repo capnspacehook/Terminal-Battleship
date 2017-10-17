@@ -1,5 +1,11 @@
 # Battleship
-Commandline classic battleship game (mostly) with smart AI
+
+This is a game of classic battleship with one tweak: you choose your fleet. You can pick any combination
+of ships provided their total sizes fall within the specified limit. This has some interesting effects, namely
+that it's almost impossible to tell what ships your opponent has left until the very end of the game, and even then
+it's not for sure. The AI is also very smart, on Medium  or Hard difficulty it's pretty hard to beat. See below for some details. 
+
+## How to play
 
 The difficulty affects the grid size, the number of ships that
 can be placed on the grid, and the chance the computer has to hit you.
