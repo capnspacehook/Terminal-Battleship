@@ -147,7 +147,7 @@ public:
 	void sinkShip(Utils::ShipName, int);
 	bool checkWin(bool& win) const
 	{
-		if (getDestroyerNum() == 0 && getSubmarineNum() == 0 
+		if (getDestroyerNum() == 0 && getSubmarineNum() == 0
 			&& getFrigateNum() == 0 && getBattleNum() == 0 && getCarrierNum() == 0)
 			win = true;
 		return win;
@@ -191,13 +191,13 @@ private:
 	int frigateNumber;
 	int battleshipNumber;
 	int carrierNumber;
-	//stores coodinates of hits in order 
+	//stores coodinates of hits in order
 	std::vector<std::pair<int, int>> lastHits;
 	//stores pointers to ship objects
 	std::vector<Ship*> fleet;
 	//grid in which the ships, hits, and misses are marked
 	std::vector<std::vector<char>> grid;
-	//vector for storing ships locations. Allows program to track if 
+	//vector for storing ships locations. Allows program to track if
 	//specific ships are sunk
 	std::vector<std::vector<char>> fleetPos;
 	//works with fleetPos to detirmine what kind of ship is in a certain
