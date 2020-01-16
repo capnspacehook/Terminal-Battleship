@@ -7,7 +7,7 @@
 class ComputerGrid : public GameGrid
 {
 public:
-	ComputerGrid(int sDifficulty, bool displGrid) 
+	ComputerGrid(int sDifficulty, bool displGrid)
 		: GameGrid(sDifficulty, displGrid)
 	{
 		chooseRandomShips();
@@ -56,5 +56,5 @@ private:
 	int successfulHits = 0;
 
 	friend void PlayerGrid::updateTurnGrid(ComputerGrid&);
-	friend void ComputerGrid::updateTurnGrid(ComputerGrid&);
+	// friend void ComputerGrid::updateTurnGrid(ComputerGrid&);
 };

@@ -1,15 +1,18 @@
 CC = g++ -std=c++11
-exe = RunBattleship.exe
+exe = RunBattleship
 
 $(exe): BattleshipDriver.o ComputerGrid.o GameGrid.o PlayerGrid.o
-	$(CC): BattleshipDriver.o ComputerGrid.o GameGrid.o PlayerGrid.o -o $(exe)
+	$(CC) -o RunBattleship BattleshipDriver.o ComputerGrid.o GameGrid.o PlayerGrid.o
 
 BattleshipDriver.o: BattleshipDriver.cpp
 	$(CC) -c BattleshipDriver.cpp
+
 ComputerGrid.o: ComputerGrid.cpp
 	$(CC) -c ComputerGrid.cpp
+
 GameGrid.o: GameGrid.cpp
 	$(CC) -c GameGrid.cpp
+
 PlayerGrid.o: PlayerGrid.cpp
 	$(CC) -c PlayerGrid.cpp
 
