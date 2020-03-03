@@ -1,5 +1,6 @@
 CC = g++ -std=c++11
 exe = RunBattleship
+exe_2 = UnitTesting
 
 $(exe): BattleshipDriver.o Test.o ComputerGrid.o GameGrid.o PlayerGrid.o
 	$(CC) -o RunBattleship BattleshipDriver.o ComputerGrid.o GameGrid.o PlayerGrid.o
