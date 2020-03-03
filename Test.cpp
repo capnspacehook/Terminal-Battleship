@@ -4,8 +4,9 @@
 #include "ComputerGrid.h"
 using namespace std;
 
-int main()
-{
+int main() {
+  int diffChoice;
+  bool turnResult;
   cout << "Welcome to the unit testing area!\n" << endl
        << "Please choose your difficulty:" << endl
        << "(1) Easy" << endl
@@ -21,9 +22,11 @@ int main()
       cin >> diffChoice;
     }
 
-    PlayerGrid playerGrid(diffChoice, true);
 
+    ComputerGrid computerGrid(diffChoice, true);
+    computerGrid.printGrid();
+    computerGrid.setGridCell(0,0,'*');
+    computerGrid.fire(0,0,turnResult);
 
 
 }
-
