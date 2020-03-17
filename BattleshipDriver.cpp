@@ -40,6 +40,7 @@ int main()
 			computerGrid.printGrid();
 			playerGrid.playerFire(shotX, shotY);
 			computerGrid.fire(shotX, shotY, turnResult);
+			Utils::pause();
 			Utils::clearScreen();
 		} while (turnResult && !computerGrid.checkWin(playerWon));
 
@@ -53,16 +54,18 @@ int main()
 			playerGrid.printGrid();
 			//computerGrid.updateProbs();
 			//computerGrid.printProbGrid();
-			system("pause");
+			//system("pause");
+			Utils::pause();
 			computerGrid.computerFire(shotX, shotY, turnResult);
 			playerGrid.fire(shotX, shotY, turnResult);
 			playerGrid.updateTurnGrid(computerGrid);
 			//computerGrid.printProbGrid();
-			system("pause");
+			//system("pause");
+			Utils::pause();
 		} while (turnResult && !playerGrid.checkWin(computerWon));
 	}
 
-	Utils::clearScreen();
+	//Utils::clearScreen();
 
 	if (playerWon)
 		cout << "You Win!\n\n";
@@ -70,5 +73,6 @@ int main()
 		cout << "You Lose...\n\n";
 
 	cout << "Thanks for playing!\nCreated by Andrew LeFevre\n";
-	system("pause");
+	//system("pause");
+	Utils::pause();
 }
