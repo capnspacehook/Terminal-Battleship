@@ -128,13 +128,11 @@ void ComputerGrid::fire(int x, int y, bool& playerHit)
 
 	if (getGridCell(x, y) == 'X') 
 	{
-		cout << "You already fired here, try again\n";
 		playerHit = true;
 	}
 
 	if (getGridCell(x, y) == 'S')
 	{
-                cout << "You already fired here, try again\n";
 		playerHit = true;
 		return;
 	}
