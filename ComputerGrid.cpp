@@ -126,6 +126,19 @@ void ComputerGrid::fire(int x, int y, bool& playerHit)
 	Utils::clearScreen();
 	cout << "Player's Turn\n";
 
+	if (getGridCell(x, y) == 'X') 
+	{
+		cout << "You already fired here, try again\n";
+		playerHit = true;
+	}
+
+	if (getGridCell(x, y) == 'S')
+	{
+                cout << "You already fired here, try again\n";
+		playerHit = true;
+		return;
+	}
+
 	if (getGridCell(x, y) == '~')
 	{
 		setGridCell(x, y, 'X');
