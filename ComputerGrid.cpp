@@ -126,7 +126,7 @@ void ComputerGrid::fire(int x, int y, bool& playerHit)
 	Utils::clearScreen();
 	cout << "Player's Turn\n";
 
-	if (getGridCell(x, y) == 'X') 
+	if (getGridCell(x, y) == 'X' || getGridCell(x, y) == 'H') 
 	{
 		playerHit = true;
 	}
