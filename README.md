@@ -5,6 +5,12 @@ of ships provided their total sizes fall within the specified limit. This has so
 that it's almost impossible to tell what ships your opponent has left until the very end of the game, and even then
 it's not for sure. The AI is also very smart, on Medium  or Hard difficulty it's pretty hard to beat. See below for some details. 
 
+## How to compile
+```g++ -std=c++17 *.h *.cpp```
+
+## Launch via
+```./a.out```
+
 ## How to play
 
 The difficulty affects the grid size, the number of ships that
