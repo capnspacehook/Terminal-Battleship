@@ -2,29 +2,31 @@
 #include "GameGrid.h"
 #include "PlayerGrid.h"
 #include "ComputerGrid.h"
+
 using namespace std;
 
 int main()
 {
-	int diffChoice;
+	int diffChoice = 0;
 	int shotX;
 	int shotY;
 	bool turnResult = false;
 	bool playerWon = false;
 	bool computerWon = false;
 
-	cout << "Welcome to Battleship 2.0!" << endl
+	while (diffChoice < 1 || diffChoice > 3)
+	{
+		Utils::clearScreen();
+		cout << "Welcome to Battleship!" << endl
 		<< "Please choose your difficulty:" << endl
 		<< "(1) Easy" << endl
-		<< "(2) Medium" << endl
-		<< "(3) Hard\n: ";
-	cin >> diffChoice;
-	while (cin.fail() || diffChoice < 1 || diffChoice > 3)
-	{
-		cin.clear();
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
-		cout << "That is not a valid difficulty setting." << endl
-			<< "Please enter a valid difficulty setting: ";
+		<< "(2) Normal" << endl
+		<< "(3) Hard" << endl;
+		if (diffChoice != 0) {
+			cout << "That is not a valid difficulty setting." << endl
+			<< "Please enter a valid difficulty setting: " << endl;
+		}
+		std::cout << "Difficulty: ";
 		cin >> diffChoice;
 	}
 

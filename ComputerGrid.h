@@ -56,5 +56,4 @@ private:
 	int successfulHits = 0;
 
 	friend void PlayerGrid::updateTurnGrid(ComputerGrid&);
-	friend void ComputerGrid::updateTurnGrid(ComputerGrid&);
 };
