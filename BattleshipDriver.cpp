@@ -1,7 +1,9 @@
 #include <iostream>
+#include <limits>
 #include "GameGrid.h"
 #include "PlayerGrid.h"
 #include "ComputerGrid.h"
+#include "Utils.h"
 using namespace std;
 
 int main()
@@ -53,12 +55,12 @@ int main()
 			playerGrid.printGrid();
 			//computerGrid.updateProbs();
 			//computerGrid.printProbGrid();
-			system("pause");
+			Utils::pause();
 			computerGrid.computerFire(shotX, shotY, turnResult);
 			playerGrid.fire(shotX, shotY, turnResult);
 			playerGrid.updateTurnGrid(computerGrid);
 			//computerGrid.printProbGrid();
-			system("pause");
+			Utils::pause();
 		} while (turnResult && !playerGrid.checkWin(computerWon));
 	}
 
@@ -70,5 +72,5 @@ int main()
 		cout << "You Lose...\n\n";
 
 	cout << "Thanks for playing!\nCreated by Andrew LeFevre\n";
-	system("pause");
+	Utils::pause();
 }

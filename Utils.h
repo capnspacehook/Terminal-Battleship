@@ -21,9 +21,9 @@ namespace Utils
 	}
 	inline void pause()
 	{
-		std::cout << "Press ENTER to continue... " << std::flush;
-		std::cin.ignore(std::numeric_limits <std::streamsize> ::max(), '\n');
-		std::cin.get();
+		do {
+    		std::cout << "Press the Enter key to continue." << '\n';
+   		} while (std::cin.get() != '\n');
 	}
 	enum Difficulty { EASY, MEDIUM, HARD };
 	enum ShipName { DESTROYER, SUBMARINE, FRIGATE, BATTLESHIP, CARRIER };
